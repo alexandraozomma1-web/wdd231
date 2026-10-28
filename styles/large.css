@@ -1,0 +1,39 @@
+@media screen and (min-width: 768px) {
+    /* Hide mobile menu button */
+    #menu {
+        display: none;
+    }
+
+    /* Display horizontal navigation */
+    nav {
+        display: block !important;
+        width: auto;
+    }
+.navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; /* Keeps the links close and structured together instead of a huge gap */
+        background-color: transparent;
+        list-style: none;
+    }
+
+   .navigation li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+
+    /* Shift About Me & Student Photo to 2 columns */
+  .hero-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+  /* Display course cards in a 3-column grid */
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}

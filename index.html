@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta name="description" content="WDD 231 Course Home Page for Adaugo Ozomma, showcasing web development projects, assignments, and dynamic course certificate lists.">
+    <title>WDD 231 - Course Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets in Correct Order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript Files with defer -->
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+
 </head>
 <body>
-    <h1>WDD 231</h1>
+    <!-- HEADER SEGMENT -->
+<header>
+    <div class="logo-box">
+        <img src="images/home.svg" alt="Home Logo Icon" width="30" height="30">
+        <span>Alexandra Adaugo Ozomma</span>
+    </div>
+    <button id="menu" aria-label="Menu Toggle Button"></button>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- MAIN CONTENT SEGMENT -->
+    <main>
+        <h1>Home</h1>
+        
+        <div class="hero-grid">
+            <!-- Section 1: About Me -->
+            <section class="card">
+                <h2>About Me</h2>
+                <p>Hello! I'm Alexandra Ozomma, a BYU-Pathway software engineering student passionate about web development, clean design, and practical programming. This site is where I track my WDD 231 coursework, share my projects, and practice building responsive web applications.</p>
+            </section>
+
+            <!-- Section 2: Student Photo -->
+            <section class="card">
+                <h2>Student Photo</h2>
+                <div class="photo-container">
+                    <img src="images/adaugo-alexandra-ozomma.jpg" alt="Portrait of Adaugo Ozomma" loading="lazy" width="300" height="350">
+                </div>
+            </section>
+        </div>
+
+        <!-- Section 3: Web Certificate Courses -->
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="all" class="filter-btn">All Courses</button>
+                <button id="cse" class="filter-btn">CSE Courses</button>
+                <button id="wdd" class="filter-btn">WDD Courses</button>
+            </div>
+            
+            <!-- JavaScript will dynamically inject course cards here -->
+            <div id="course-list" class="course-grid"></div>
+            
+            <!-- Total Credits Display -->
+            <p id="total-credits">The total credits for courses listed above is <span id="credit-count">0</span></p>
+        </section>
+    </main>
+
+    <!-- FOOTER SEGMENT -->
+ <!-- FOOTER SEGMENT -->
+<footer>
+    <div class="social-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="images/linkedin-square.svg" alt="LinkedIn Icon" width="30" height="30">
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="images/github.svg" alt="GitHub Icon" width="30" height="30">
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/facebook.svg" alt="Facebook Icon" width="30" height="30">
+        </a>
+    </div>
+    <p>&copy;<span id="currentyear"></span> • Alexandra A. Ozomma • Nigeria</p>
+    <p id="lastModified"></p>
+</footer>
 </body>
 </html>
