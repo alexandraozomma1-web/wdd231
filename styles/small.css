@@ -36,7 +36,7 @@ header {
     background-color: var(--primary-color);
     color: #ffffff;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
