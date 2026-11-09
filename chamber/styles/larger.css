@@ -1,0 +1,82 @@
+@media (min-width: 640px) {
+
+  /* 1. HIDE THE HAMBURGER ICON ON DESKTOP */
+  #menu-toggle {
+    display: none !important;
+  }
+
+  /* 2. KEEP NAV LINKS INLINE */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  /* 3. FOOTER 3-COLUMN LAYOUT */
+  footer {
+    padding: 2.5rem 3rem;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Exactly 3 equal columns */
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  /* Left Column: Chamber Info */
+  .footer-contact {
+    justify-self: start;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .footer-contact p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+  }
+
+  .footer-contact p strong {
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+
+  /* Middle Column: Social Icons */
+  .footer-social {
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Right Column: Stacked Project & Copyright Info */
+  .footer-info {
+    justify-self: end;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .footer-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+  }
+
+  .project-title {
+    font-weight: 600;
+    color: #ffffff;
+  }
+}

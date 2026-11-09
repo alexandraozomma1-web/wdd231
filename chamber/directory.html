@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebonyi Chamber of Commerce - Member Directory</title>
+  <meta name="description" content="Explore local businesses, services, and commercial partners in the Ebonyi Chamber of Commerce directory.">
+  <meta name="author" content="Adaugo Alexandra Ozomma">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Ebonyi State Chamber of Commerce - Member Directory">
+  <meta property="og:description" content="Discover and connect with local businesses in Ebonyi State through our official chamber directory.">
+  <meta property="og:image" content="https://alexandraozomma1-web.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://alexandraozomma1-web.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/directory.js" defer></script>
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="images/ebonyi-favicon.png">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/ebonyi-chamber.webp" alt="Ebonyi Chamber Logo" width="50" height="50">
+      <span>Ebonyi State Chamber of Commerce</span>
+    </div>
+    <nav>
+      <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Directory</h1>
+    
+    <!-- View Toggle Buttons -->
+    <div class="menu-toggle-view">
+      <button id="grid-view" class="active-view">Grid</button>
+      <button id="list-view">List</button>
+    </div>
+
+    <!-- Members Container (div used to clear article heading warning) -->
+    <div id="members-container" class="grid-layout"></div>
+
+     <!-- Call-to-Action Banner (h2 used for clean heading hierarchy) -->
+    <div class="footer-cta">
+      <h2>Ready to Join Us?</h2>
+      <p>Have questions or want to partner with local businesses? <a href="join.html">Contact Us Today</a> or explore our membership tiers!</p>
+    </div>
+
+    <!-- Newsletter Subscription Box -->
+    <div class="footer-newsletter">
+      <div class="newsletter-title">Subscribe to Our Newsletter</div>
+      <form class="newsletter-form">
+        <div class="form-group">
+          <label for="newsletter-name">Name:</label>
+          <input type="text" id="newsletter-name" placeholder="e.g. Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="newsletter-email">Email:</label>
+          <input type="email" id="newsletter-email" placeholder="e.g. jane@example.com" required>
+        </div>
+        <button type="submit" class="sign-up-btn">Sign Up</button>
+      </form>
+    </div>
+  </main>
+
+<footer>
+  <div class="footer-content">
+    
+    <!-- Left Column: Chamber Name & Address -->
+    <div class="footer-contact">
+      <p><strong>Ebonyi State Chamber of Commerce</strong></p>
+      <p>15 Water Works Road</p>
+      <p>Abakaliki, Ebonyi State, Nigeria</p>
+      <p>info@ebonyichamber.org</p>
+      <p>+234 803 123 4567</p>
+    </div>
+
+    <!-- Middle Column: Social Icons -->
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook-square.jpg" alt="Facebook"></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="images/instagram-logo.jpg" alt="Instagram"></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/twitter-logo.jpg" alt="Twitter"></a>
+    </div>
+
+    <!-- Right Column: Project & Copyright Info -->
+    <div class="footer-info">
+      <p class="project-title">WDD231 Class Project</p>
+      <p class="student-name">Adaugo Alexandra Ozomma</p>
+      <p>&copy; <span id="currentyear"></span> Ebonyi State Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

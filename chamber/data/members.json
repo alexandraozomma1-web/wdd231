@@ -1,0 +1,65 @@
+[
+  {
+    "name": "TopHealth Pharmacy",
+    "address": "24 Ogoja Road, Abakaliki, Ebonyi",
+    "phone": "+234 803 123 4567",
+    "website": "https://tophealthpharmacy.com",
+    "image": "images/top-health.jpeg",
+    "membershipLevel": 3,
+    "tagline": "Your Trusted Community Healthcare Partner"
+  },
+  {
+    "name": "Salt City Tech Hub",
+    "address": "15 Water Works Road, Abakaliki, Ebonyi",
+    "phone": "+234 802 987 6543",
+    "website": "https://saltcitytech.ng",
+    "image": "images/salt-city-tech-hub.webp",
+    "membershipLevel": 2,
+    "tagline": "Empowering Local Tech & Software Talent"
+  },
+  {
+    "name": "Ebonyi Agro Alliance",
+    "address": "8 Rice Mill Industry Road, Abakaliki, Ebonyi",
+    "phone": "+234 814 555 0199",
+    "website": "https://ebonyiagro.org",
+    "image": "images/ebonyi-agro.webp",
+    "membershipLevel": 3,
+    "tagline": "Sustainable Agriculture & Grains Distribution"
+  },
+  {
+    "name": "GreenPower Solar Africa",
+    "address": "45 Enugu-Abakaliki Expressway, Ebonyi",
+    "phone": "+234 805 444 3210",
+    "website": "https://greenpowersolar.ng",
+    "image": "images/green-power-solar.webp",
+    "membershipLevel": 2,
+    "tagline": "Clean Energy & Off-Grid Solar Solutions"
+  },
+  {
+    "name": "Abakaliki Modern Logistics",
+    "address": "12 Commercial Avenue, Abakaliki, Ebonyi",
+    "phone": "+234 811 222 3344",
+    "website": "https://abakalikilogistics.com",
+    "image": "images/abakaliki-logistics.webp",
+    "membershipLevel": 1,
+    "tagline": "Fast Commercial Transit & Freight Services"
+  },
+  {
+    "name": "Sunrise Hospitality Suites",
+    "address": "3 Kuto Road, Abakaliki, Ebonyi",
+    "phone": "+234 809 777 8899",
+    "website": "https://sunrisesuites.ng",
+    "image": "images/sunrise-hospitality.webp",
+    "membershipLevel": 2,
+    "tagline": "Premium Lodging & Conference Facilities"
+  },
+  {
+    "name": "Ebonyi Builders & Civil Ltd",
+    "address": "50 Afikpo Road, Abakaliki, Ebonyi",
+    "phone": "+234 803 666 5544",
+    "website": "https://ebonyibuilders.com",
+    "image": "images/builders-and-civil.webp",
+    "membershipLevel": 1,
+    "tagline": "Civil Engineering & Structural Construction"
+  }
+]
