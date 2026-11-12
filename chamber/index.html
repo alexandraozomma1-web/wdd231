@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ebonyi Chamber of Commerce - Member Directory</title>
-  <meta name="description"
-    content="Explore local businesses, services, and commercial partners in the Ebonyi Chamber of Commerce directory.">
+  <title>Ebonyi State Chamber of Commerce - Member Directory</title>
+  <meta name="description" content="Explore local businesses, services, and commercial partners in the Ebonyi State Chamber of Commerce directory.">
   <meta name="author" content="Adaugo Alexandra Ozomma">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +14,14 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Ebonyi State Chamber of Commerce - Member Directory">
-  <meta property="og:description"content="Discover and connect with local businesses in Ebonyi State through our official chamber directory.">
-  <meta property="og:image" content="https://alexandraozomma1-web.github.io/wdd231/chamber/images/ebonyi-chamber-hero-image.jpg">
+  <meta property="og:description"
+    content="Discover and connect with local businesses in Ebonyi State through our official chamber directory.">
+  <meta property="og:image"
+    content="https://alexandraozomma1-web.github.io/wdd231/chamber/images/ebonyi-chamber-hero-image.webp">
   <meta property="og:url" content="https://alexandraozomma1-web.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
+
+  <link rel="preload" as="image" href="images/ebonyi-chamber-hero-image.webp">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -28,7 +31,7 @@
 
   <!-- JavaScript -->
   <script src="scripts/directory.js" defer></script>
-  <script src="scripts/home.js"></script>
+  <script src="scripts/home.js" defer></script>
   <link rel="icon" type="image/png" sizes="16x16" href="images/ebonyi-favicon.png">
 </head>
 
@@ -53,9 +56,9 @@
     <!-- 1. Hero Section -->
     <section class="hero">
       <picture>
-        <source media="(min-width: 1000px)" srcset="images/ebonyi-chamber-hero-image.jpg">
+        <source media="(min-width: 1000px)" srcset="images/ebonyi-chamber-hero-image.webp">
         <img src="images/ebonyi-chamber-hero-image.webp" alt="Abakaliki International Conference Centre Banner"
-          width="1200" height="450">
+          width="848" height="463" fetchpriority="high">
       </picture>
       <div class="cta-box">
         <h1>Welcome to the Ebonyi State Chamber of Commerce</h1>
@@ -73,7 +76,7 @@
         <p><strong>Location:</strong> Abakaliki International Conference Centre</p>
         <p>Network with over 500 local business leaders and policy experts.</p>
       </div>
-      <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 1rem 0;">
+      <!-- <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 1rem 0;"> -->
       <div class="event-item">
         <h3>Ebonyi MSME Grant & Funding Workshop</h3>
         <p><strong>Date:</strong> December 10, 2026</p>
@@ -84,13 +87,14 @@
 
     <!-- 3. Local Weather Section -->
     <section class="card weather">
-    <h2 class="weather-header">
-      <span>📍 Abakaliki</span>
-      <span id="weather-desc" class="weather-badge">Loading...</span>
-    </h2>
+      <h2 class="weather-header">
+        <span>📍 Abakaliki</span>
+        <span id="weather-desc" class="weather-badge">Loading...</span>
+      </h2>
 
       <div class="weather-hero">
-        <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" width="75" height="75">
+        <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" width="75"
+          height="75">
         <div class="temp-display">
           <span id="temp-value">--</span><span class="degree">&deg;C</span>
         </div>

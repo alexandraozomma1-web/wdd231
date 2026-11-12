@@ -406,38 +406,54 @@ footer {
 }
 
 .cta-box {
+  /* REMOVE position, bottom, left from here */
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1rem; /* Adds space above it on mobile */
   background-color: rgba(15, 46, 33, 0.95);
-  /* Deep emerald brand background */
   color: #fff;
-  padding: 1.5rem;
-  border-radius: 0 0 8px 8px;
+  padding: 1.25rem;
+  border-radius: 8px;
   text-align: center;
 }
 
+.hero .cta-box h1,
+.hero .cta-box h2 {
+  font-size: 1.3rem; /* Shrinks the text down nicely */
+  line-height: 1.2;
+}
+
 .cta-box h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--accent-color, #c5a059);
-  /* Gold accent */
 }
 
 .cta-box p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #ffffff;
-  margin-bottom: 1.25rem;
-  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
 }
+
 
 .cta-button {
   display: inline-block;
   background-color: var(--accent-color, #d4b068);
   color: var(--primary-color, #091d14);
-  padding: 0.6rem 1.2rem;
+  padding: 0.4rem 1rem;
   border-radius: 4px;
   font-weight: 700;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: background-color 0.2s;
+}
+
+.cta-box .cta-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto; /* Centers an inline-block button horizontally */
 }
 
 .cta-button:hover {
@@ -622,4 +638,10 @@ footer {
   color: #475569;
   /* Darker slate gray to pass small-text contrast cleanly */
   margin-top: 0.1rem;
+}
+
+.events hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1rem 0;
 }
