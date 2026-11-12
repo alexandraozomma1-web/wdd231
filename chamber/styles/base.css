@@ -121,7 +121,8 @@
 #members-container.list-layout section h3 {
   grid-column: 1;
   grid-row: 1;
-  margin: 0 0 0 50px; /* Offset to sit right next to the 40px logo */
+  margin: 0 0 0 50px;
+  /* Offset to sit right next to the 40px logo */
   font-size: 0.95rem;
   font-weight: 600;
   white-space: nowrap;
@@ -381,4 +382,244 @@ footer {
   .footer-info {
     text-align: right;
   }
+}
+
+/* --- Home Page Mobile Layout --- */
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cta-box {
+  background-color: rgba(15, 46, 33, 0.95);
+  /* Deep emerald brand background */
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+}
+
+.cta-box h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color, #c5a059);
+  /* Gold accent */
+}
+
+.cta-box p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color, #d4b068);
+  color: var(--primary-color, #091d14);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #b38f4d;
+}
+
+/* Home Content Cards */
+.card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  color: var(--primary-color, #0f2e21);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent-color, #c5a059);
+  padding-bottom: 0.3rem;
+}
+
+/* Spotlight Cards Styling */
+.spotlight-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 0.5px;
+  object-fit: contain;
+}
+
+.spotlight-card h3 {
+  font-size: 1rem;
+  color: var(--primary-color, #0f2e21);
+  margin: 0.25rem 0;
+}
+
+.spotlight-card p {
+  font-size: 0.85rem;
+  color: #334155;
+  margin: 0.25rem 0;
+}
+
+.spotlight-level {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #b38f4d;
+}
+
+/* --- Clean Professional Weather Card --- */
+.card.weather {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #0f2e21;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0f2e21;
+}
+
+.weather-badge {
+  background-color: #e2e8f0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.weather-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+#weather-icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.temp-display {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+#temp-value {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #0f2e21;
+}
+
+.degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  color: #7a5d24;
+}
+
+.weather-note {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.forecast-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f2e21;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.forecast-day-card {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.65rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forecast-day-card .day-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f2e21;
+}
+
+.forecast-day-card img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin: 0.15rem 0;
+}
+
+.forecast-day-card .temp-high {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f2e21;
+}
+
+.forecast-day-card .temp-low {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+  /* Darker slate gray to pass small-text contrast cleanly */
+  margin-top: 0.1rem;
 }

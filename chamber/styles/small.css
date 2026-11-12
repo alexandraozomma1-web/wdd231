@@ -1,13 +1,19 @@
 /* CSS Custom Properties (Color Scheme & Fonts) */
 
 :root {
-  --primary-color: #0f2e21;   /* Deep official green from the logo seal */
-  --secondary-color: #1b4d3e; /* Rich forest green for hover/accents */
-  --accent-color: #c5a059;    /* Elegant gold tone matching the lettering and border */
-  --bg-color: #fcfbfa;        /* Soft cream background matching the badge base */
-  --card-bg: #ffffff;         /* Clean white for cards */
-  --text-color: #1e293b;  
-  --font-family: 'Inter', system-ui, sans-serif;    /* Dark text for high readability */
+  --primary-color: #091d14;
+  /* Deep official green from the logo seal */
+  --secondary-color: #1b4d3e;
+  /* Rich forest green for hover/accents */
+  --accent-color: #d4b068;
+  /* Elegant gold tone matching the lettering and border */
+  --bg-color: #fcfbfa;
+  /* Soft cream background matching the badge base */
+  --card-bg: #ffffff;
+  /* Clean white for cards */
+  --text-color: #1e293b;
+  --font-family: 'Inter', system-ui, sans-serif;
+  /* Dark text for high readability */
 }
 
 * {
@@ -53,7 +59,8 @@ header {
 }
 
 .nav-links {
-  display: none; /* Hidden on mobile by default, toggled via JS */
+  display: none;
+  /* Hidden on mobile by default, toggled via JS */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -73,7 +80,7 @@ header {
   display: block;
 }
 
-.nav-links a.active, 
+.nav-links a.active,
 .nav-links a:hover {
   background-color: var(--secondary-color);
 }
@@ -84,4 +91,3 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
-
