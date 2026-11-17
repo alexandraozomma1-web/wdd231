@@ -1,6 +1,6 @@
 @media screen and (min-width: 768px) {
     /* Hide mobile menu button */
-    #menu {
+    #menu-toggle {
         display: none;
     }
 

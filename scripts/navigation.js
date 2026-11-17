@@ -1,4 +1,4 @@
-const menuButton = document.querySelector('#menu');
+const menuButton = document.querySelector('#menu-toggle');
 const navElement = document.querySelector('nav');
 
 // Initialize button content
