@@ -97,7 +97,6 @@
 /* List Item Styling */
 #members-container.list-layout section {
   display: grid;
-  /* 6 Columns: Logo+Name, Tagline, Address, Phone, Website, Level */
   grid-template-columns: 2.2fr 1.5fr 1.8fr 1.2fr 1.5fr 1fr;
   align-items: center;
   gap: 1rem;
@@ -107,28 +106,19 @@
   text-align: left;
 }
 
-/* 1. Logo (placed first in column 1) */
 #members-container.list-layout section img {
-  grid-column: 1;
-  grid-row: 1;
-  width: 40px;
-  height: auto;
-  object-fit: contain;
-  justify-self: start;
+  display: none;
 }
 
-/* 2. Company Name (placed next to logo in column 1) */
 #members-container.list-layout section h3 {
   grid-column: 1;
   grid-row: 1;
-  margin: 0 0 0 50px;
-  /* Offset to sit right next to the 40px logo */
+  margin: 0;
   font-size: 0.95rem;
   font-weight: 600;
   white-space: nowrap;
 }
 
-/* 3. Tagline (Column 2) */
 #members-container.list-layout section .tagline {
   grid-column: 2;
   grid-row: 1;
@@ -140,7 +130,6 @@
   text-overflow: ellipsis;
 }
 
-/* 4. Address (Column 3) */
 #members-container.list-layout section .address {
   grid-column: 3;
   grid-row: 1;
@@ -151,7 +140,6 @@
   text-overflow: ellipsis;
 }
 
-/* 5. Phone (Column 4) */
 #members-container.list-layout section .phone {
   grid-column: 4;
   grid-row: 1;
@@ -160,7 +148,6 @@
   white-space: nowrap;
 }
 
-/* 6. Website (Column 5) */
 #members-container.list-layout section .website {
   grid-column: 5;
   grid-row: 1;
@@ -171,7 +158,6 @@
   text-overflow: ellipsis;
 }
 
-/* 7. Membership Badge (Column 6) */
 #members-container.list-layout section .membership-badge {
   grid-column: 6;
   grid-row: 1;
@@ -180,15 +166,45 @@
   white-space: nowrap;
 }
 
+/* Directory View Toggle Buttons (Wireframe Match: Centered & Styled) */
+.menu-toggle-view {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.menu-toggle-view button,
+#grid-view,
+#list-view {
+  padding: 0.5rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  background-color: #e2e8f0;
+  color: #0f2e21;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-toggle-view button.active-view,
+#grid-view.active-view,
+#list-view.active-view {
+  background-color: var(--primary-color, #091d14);
+  color: #ffffff;
+  border-color: var(--primary-color, #091d14);
+}
+
+/* Footer Overall Layout */
 /* Footer Overall Layout */
 footer {
-  background-color: var(--primary-color, #0f2e21);
+  background-color: var(--primary-color, #091d14);
   color: #ffffff;
-  padding: 3rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   width: 100%;
 }
 
@@ -196,66 +212,72 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.footer-section {
+.footer-contact {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.footer-contact h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-}
-
 .footer-contact p,
-.footer-info p {
+.footer-info p,
+.footer-info span,
+#lastModified {
   font-size: 0.85rem;
   color: #cbd5e1;
-  line-height: 1.3;
+  line-height: 1.4;
   margin: 0;
 }
 
+.footer-contact p:first-child {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+/* Wireframe-matched Circular Social Icons Row */
 .footer-social {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin: 0.5rem 0;
 }
 
 .footer-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
+  width: 42px;
+  height: 42px;
+  background-color: #64748b;
+  /* Solid circular gray background matching wireframe */
   border-radius: 50%;
   transition: background-color 0.2s, transform 0.2s;
 }
 
 .footer-social a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #475569;
   transform: translateY(-2px);
 }
 
 .footer-social img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
+  /* Removed the harsh white filter so your logo images render correctly inside the circle */
 }
 
-/* Style for the Last Modification text to match the footer theme */
-.footer-info p,
-.footer-info span,
-#lastModified {
-  color: #cbd5e1;
-  font-size: 0.85rem;
-  margin: 0;
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 /* 1. Ready to Join Banner */
@@ -397,7 +419,8 @@ footer {
   width: 100%;
 }
 
-.hero picture img {
+.hero picture img,
+.join-hero-section picture img {
   width: 100%;
   height: auto;
   display: block;
@@ -406,10 +429,9 @@ footer {
 }
 
 .cta-box {
-  /* REMOVE position, bottom, left from here */
   width: 100%;
   max-width: 100%;
-  margin-top: 1rem; /* Adds space above it on mobile */
+  margin-top: 1rem;
   background-color: rgba(15, 46, 33, 0.95);
   color: #fff;
   padding: 1.25rem;
@@ -419,7 +441,7 @@ footer {
 
 .hero .cta-box h1,
 .hero .cta-box h2 {
-  font-size: 1.3rem; /* Shrinks the text down nicely */
+  font-size: 1.3rem;
   line-height: 1.2;
 }
 
@@ -437,7 +459,6 @@ footer {
   line-height: 1.4;
 }
 
-
 .cta-button {
   display: inline-block;
   background-color: var(--accent-color, #d4b068);
@@ -453,7 +474,7 @@ footer {
 .cta-box .cta-button {
   display: block;
   width: fit-content;
-  margin: 0 auto; /* Centers an inline-block button horizontally */
+  margin: 0 auto;
 }
 
 .cta-button:hover {
@@ -495,7 +516,7 @@ footer {
 .spotlight-card img {
   max-width: 80px;
   height: auto;
-  margin-bottom: 0.5px;
+  margin-bottom: 0.5rem;
   object-fit: contain;
 }
 
@@ -516,7 +537,7 @@ footer {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   font-weight: bold;
-  color: #b38f4d;
+  color: #7a5d24;
 }
 
 /* --- Clean Professional Weather Card --- */
@@ -574,7 +595,7 @@ footer {
 }
 
 .degree {
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 700;
   margin-top: 0.35rem;
   color: #7a5d24;
@@ -636,7 +657,6 @@ footer {
   font-size: 0.8rem;
   font-weight: 500;
   color: #475569;
-  /* Darker slate gray to pass small-text contrast cleanly */
   margin-top: 0.1rem;
 }
 
@@ -644,4 +664,246 @@ footer {
   border: none;
   border-top: 1px solid #e2e8f0;
   margin: 1rem 0;
+}
+
+/* Join Page Layout (Mobile First - Stacked) */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.join-form-section,
+.membership-cards {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Styling & Favorable Eye Tracking */
+.chamber-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.chamber-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #1e293b;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.chamber-form input[type="text"],
+.chamber-form input[type="email"],
+.chamber-form input[type="tel"],
+.chamber-form select,
+.chamber-form textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chamber-form input:focus,
+.chamber-form select:focus,
+.chamber-form textarea:focus {
+  outline: 2px solid var(--primary-color, #0f2e21);
+  border-color: transparent;
+}
+
+.chamber-form input:required:invalid {
+  border-left: 4px solid #dc2626;
+}
+
+.chamber-form input:required:valid {
+  border-left: 4px solid #16a34a;
+}
+
+.submit-btn {
+  background-color: var(--primary-color, #0f2e21);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  opacity: 0.92;
+}
+
+/* Membership Cards + Initial Load Animation */
+.membership-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mem-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid var(--primary-color, #0f2e21);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  animation: cardSlideIn 0.6s ease-out forwards;
+}
+
+.card-1 {
+  animation-delay: 0.1s;
+}
+
+.card-2 {
+  animation-delay: 0.25s;
+}
+
+.card-3 {
+  animation-delay: 0.4s;
+}
+
+.card-4 {
+  animation-delay: 0.55s;
+}
+
+.mem-card h3 {
+  margin: 0 0 0.75rem 0;
+  color: var(--primary-color, #0f2e21);
+}
+
+.modal-open-btn {
+  background-color: var(--primary-color, #0f2e21);
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* HTML Dialog Modal Styling */
+.membership-modal {
+  border: none;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.membership-modal::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--primary-color, #0f2e21);
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.membership-modal ul {
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Thank You Page Styling */
+.thankyou-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.thankyou-section h1 {
+  color: var(--primary-color, #0f2e21);
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-lead {
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.results-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.results-card h2 {
+  font-size: 1.2rem;
+  color: var(--primary-color, #0f2e21);
+  margin-top: 0;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 0.5rem;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.results-list li {
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.results-list strong {
+  color: #334155;
+  display: inline-block;
+  width: 200px;
+}
+
+.return-action {
+  margin-top: 1.5rem;
 }

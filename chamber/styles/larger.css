@@ -5,18 +5,34 @@
     display: none !important;
   }
 
-  /* 2. KEEP NAV LINKS INLINE */
-  .nav-links {
+  /* 2. RESET HEADER AND NAV FOR HORIZONTAL DESKTOP LAYOUT */
+  header {
+    position: static;
+  }
+
+  header nav {
     display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-links {
+    display: flex !important;
     flex-direction: row;
+    position: static;
     width: auto;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
   }
 
   .nav-links a {
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    display: inline-block;
   }
-
 }
 
 @media (min-width: 1000px) {
@@ -65,9 +81,10 @@
     bottom: 30px;
     left: 30px;
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
+    max-width: 320px;
     margin-top: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: left;
+    text-align: center;
   }
 }

@@ -1,19 +1,12 @@
 /* CSS Custom Properties (Color Scheme & Fonts) */
-
 :root {
   --primary-color: #091d14;
-  /* Deep official green from the logo seal */
   --secondary-color: #1b4d3e;
-  /* Rich forest green for hover/accents */
   --accent-color: #d4b068;
-  /* Elegant gold tone matching the lettering and border */
   --bg-color: #fcfbfa;
-  /* Soft cream background matching the badge base */
   --card-bg: #ffffff;
-  /* Clean white for cards */
   --text-color: #1e293b;
   --font-family: 'Inter', system-ui, sans-serif;
-  /* Dark text for high readability */
 }
 
 * {
@@ -30,18 +23,33 @@ body {
 
 /* Header & Navigation Setup */
 header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1rem;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.logo-container span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
 }
 
 .logo-container img {
@@ -54,19 +62,45 @@ header {
   background: none;
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Theme toggle icon */
+#theme-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 .nav-links {
   display: none;
-  /* Hidden on mobile by default, toggled via JS */
-  list-style: none;
-  padding: 0;
-  margin: 0;
   flex-direction: column;
-  background-color: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .nav-links.open {
@@ -76,7 +110,7 @@ header {
 .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.5rem;
   display: block;
 }
 
@@ -85,9 +119,109 @@ header {
   background-color: var(--secondary-color);
 }
 
-/* Main & Footer Layout */
 main {
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* =========================================================
+   CONSOLIDATED DARK MODE OVERRIDES
+   ========================================================= */
+body.dark-mode {
+  background-color: #121816;
+  color: #e2e8f0;
+}
+
+body.dark-mode .card,
+body.dark-mode .spotlight-card,
+body.dark-mode .mem-card,
+body.dark-mode .results-card,
+body.dark-mode .join-form-section,
+body.dark-mode .membership-cards,
+body.dark-mode .forecast-day-card,
+body.dark-mode .thankyou-section,
+body.dark-mode #members-container.list-layout section {
+  background-color: #1e2925;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark-mode .card h2,
+body.dark-mode .spotlight-card h3,
+body.dark-mode .mem-card h3,
+body.dark-mode .results-card h2,
+body.dark-mode .thankyou-section h1,
+body.dark-mode .weather-header,
+body.dark-mode #temp-value,
+body.dark-mode .forecast-day-card .day-name,
+body.dark-mode .forecast-day-card .temp-high,
+body.dark-mode .forecast-label,
+body.dark-mode #members-container.list-layout section h3 {
+  color: #f8fafc;
+}
+
+body.dark-mode .card p,
+body.dark-mode .spotlight-card p,
+body.dark-mode .weather-note,
+body.dark-mode .forecast-day-card .temp-low,
+body.dark-mode .chamber-form label,
+body.dark-mode .results-list li,
+body.dark-mode .results-list strong,
+body.dark-mode .thankyou-lead,
+body.dark-mode #members-container.list-layout section .tagline,
+body.dark-mode #members-container.list-layout section .address,
+body.dark-mode #members-container.list-layout section .phone,
+body.dark-mode #members-container.list-layout section .membership-badge {
+  color: #cbd5e1;
+}
+
+body.dark-mode .weather-badge {
+  background-color: #273832;
+  color: #f8fafc;
+}
+
+body.dark-mode .chamber-form input[type="text"],
+body.dark-mode .chamber-form input[type="email"],
+body.dark-mode .chamber-form input[type="tel"],
+body.dark-mode .chamber-form select,
+body.dark-mode .chamber-form textarea,
+body.dark-mode .newsletter-form input {
+  background-color: #16221e;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark-mode #members-container.grid-layout section .website a {
+  color: #0000ee;
+}
+
+body.dark-mode #members-container.list-layout section .website a,
+body.dark-mode .card a,
+body.dark-mode footer a,
+body.dark-mode .footer-cta a,
+body.dark-mode .degree,
+body.dark-mode .spotlight-level {
+  color: #FEDB2F;
+}
+
+body.dark-mode .cta-button {
+  background-color: var(--accent-color, #d4b068);
+  color: #091d14;
+}
+
+body.dark-mode .menu-toggle-view button,
+body.dark-mode #grid-view,
+body.dark-mode #list-view {
+  background-color: #1e2925;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .menu-toggle-view button.active-view,
+body.dark-mode #grid-view.active-view,
+body.dark-mode #list-view.active-view {
+  background-color: #FEDB2F;
+  color: #091d14;
+  border-color: #FEDB2F;
 }

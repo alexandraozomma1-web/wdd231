@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebonyi State Chamber of Commerce - Application Received</title>
+  <meta name="description" content="Thank you for applying for membership with the Ebonyi State Chamber of Commerce.">
+  <meta name="author" content="Adaugo Alexandra Ozomma">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/ebonyi-favicon.png">
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/ebonyi-chamber.webp" alt="Ebonyi Chamber Logo" width="50" height="50">
+      <span>Ebonyi State Chamber of Commerce</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+      <!-- Theme toggle and single mobile menu button -->
+      <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch Light/Dark Mode">&#9680;</button>
+      <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="thankyou-section">
+      <h1>Application Submitted Successfully!</h1>
+      <p class="thankyou-lead">Thank you for applying to join the Ebonyi State Chamber of Commerce. Below is a summary
+        of the information you submitted:</p>
+
+      <div id="results-container" class="results-card">
+        <!-- JavaScript will dynamically inject the form results here -->
+      </div>
+
+      <div class="return-action">
+        <a href="index.html" class="cta-button">Return to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <p><strong>Ebonyi State Chamber of Commerce</strong></p>
+        <p>15 Water Works Road</p>
+        <p>Abakaliki, Ebonyi State, Nigeria</p>
+        <p>info@ebonyichamber.org</p>
+        <p>+234 803 123 4567</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook-square.jpg"
+            alt="Facebook"></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="images/instagram-logo.jpg"
+            alt="Instagram"></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/twitter-logo.jpg"
+            alt="Twitter"></a>
+      </div>
+      <div class="footer-info">
+        <p class="project-title">WDD231 Class Project</p>
+        <p class="student-name">Adaugo Alexandra Ozomma</p>
+        <p>&copy; <span id="currentyear"></span> Ebonyi State Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

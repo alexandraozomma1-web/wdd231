@@ -144,3 +144,24 @@ function displaySpotlights(members) {
 apiFetch();
 getSpotlights();
 
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.querySelector("#theme-toggle");
+
+  // 1. Check if the user previously selected Dark Mode
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // 2. Toggle Dark Mode on click and save preference
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+  }
+});

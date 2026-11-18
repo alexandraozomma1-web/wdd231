@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebonyi State Chamber of Commerce - Member Directory</title>
+    <meta name="description"
+        content="Explore local businesses, services, and commercial partners in the Ebonyi State Chamber of Commerce directory.">
+    <meta name="author" content="Adaugo Alexandra Ozomma">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ebonyi State Chamber of Commerce - Join">
+    <meta property="og:description"
+        content="Apply for membership in the Ebonyi State Chamber of Commerce and explore membership benefits.">
+    <meta property="og:image"
+        content="https://alexandraozomma1-web.github.io/wdd231/chamber/images/ebonyi-chamber.webp">
+    <meta property="og:url" content="https://alexandraozomma1-web.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/join.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/ebonyi-favicon.png">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/ebonyi-chamber.webp" alt="Ebonyi Chamber Logo" width="50" height="50">
+            <span>Ebonyi State Chamber of Commerce</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+            <!-- Theme toggle and single mobile menu button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch Light/Dark Mode">&#9680;</button>
+            <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <!-- Hero Banner Section -->
+        <!-- 1. Join Hero Section -->
+        <section class="hero join-hero-section">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/join-chamber.webp">
+                <img src="images/join-chamber.webp" alt="Nigerian Business Professionals Collaborating" width="848"
+                    height="463" fetchpriority="high">
+            </picture>
+            <div class="cta-box">
+                <h1>Join the Chamber</h1>
+                <p>Partner with Ebonyi State’s leading business network to expand your reach, access exclusive trade
+                    resources, and drive commercial growth.</p>
+            </div>
+        </section>
+
+        <h2>Join the Chamber</h2>
+        <div class="join-container">
+            <section class="join-form-section">
+                <h2>Membership Application</h2>
+                <form method="get" action="thankyou.html" class="chamber-form">
+
+                    <!-- 1. First Name -->
+                    <label>First Name *
+                        <input type="text" name="fname" title="Enter your first name" autocomplete="given-name"
+                            required>
+                    </label>
+
+                    <!-- 2. Last Name -->
+                    <label>Last Name *
+                        <input type="text" name="lname" title="Enter your last name" autocomplete="family-name"
+                            required>
+                    </label>
+
+                    <!-- 3. Organizational Title -->
+                    <label>Organizational Title
+                        <input type="text" name="orgtitle"
+                            title="Minimum 7 characters: letters, hyphens, and spaces only"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <!-- 4. Email Address -->
+                    <label>Email Address *
+                        <input type="email" name="email" title="Enter a valid email address" autocomplete="email"
+                            placeholder="name@example.com" required>
+                    </label>
+
+                    <!-- 5. Mobile Phone -->
+                    <label>Mobile Phone Number *
+                        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                            required>
+                    </label>
+
+                    <!-- 6. Business/Organization Name -->
+                    <label>Business / Organization Name *
+                        <input type="text" name="organization" title="Enter your business or organization name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <!-- 7. Membership Level Selection -->
+                    <label>Membership Level *
+                        <select name="membership" title="Select a membership level" required>
+                            <option value="" disabled selected>Select a Membership Level...</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- 8. Business/Organization Description -->
+                    <label>Business / Organization Description
+                        <textarea name="description" title="Briefly describe your business or organization"
+                            rows="4"></textarea>
+                    </label>
+
+                    <!-- 9. Hidden Timestamp -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <!-- 10. Submit Button -->
+                    <input type="submit" value="Apply for Membership" class="submit-btn">
+                </form>
+            </section>
+
+            <!-- 4 Membership Level Cards -->
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+
+                <div class="mem-card card-1">
+                    <h3>Non-Profit Membership Level</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-np">Learn More</button>
+                </div>
+
+                <div class="mem-card card-2">
+                    <h3>Bronze Membership Level</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-bronze">Learn More</button>
+                </div>
+
+                <div class="mem-card card-3">
+                    <h3>Silver Membership Level</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-silver">Learn More</button>
+                </div>
+
+                <div class="mem-card card-4">
+                    <h3>Gold Membership Level</h3>
+                    <button type="button" class="modal-open-btn" data-modal="modal-gold">Learn More</button>
+                </div>
+            </section>
+
+            <!-- 4 HTML Dialog Modals -->
+            <dialog id="modal-np" class="membership-modal">
+                <div class="modal-header">
+                    <h3>NP Membership (Non-Profit)</h3>
+                    <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+                </div>
+                <p><strong>Annual Fee:</strong> Free (₦0 / $0)</p>
+                <ul>
+                    <li>Official listing in the Ebonyi State Chamber Directory</li>
+                    <li>Invitations to quarterly community networking mixers</li>
+                    <li>Access to civic partnership workshops and grant alerts</li>
+                </ul>
+            </dialog>
+
+            <dialog id="modal-bronze" class="membership-modal">
+                <div class="modal-header">
+                    <h3>Bronze Membership</h3>
+                    <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+                </div>
+                <p><strong>Annual Fee:</strong> ₦50,000 / year</p>
+                <ul>
+                    <li>All NP Membership benefits included</li>
+                    <li>10% discount on Chamber training seminars and trade fairs</li>
+                    <li>Monthly digital newsletter feature for new members</li>
+                </ul>
+            </dialog>
+
+            <dialog id="modal-silver" class="membership-modal">
+                <div class="modal-header">
+                    <h3>Silver Membership</h3>
+                    <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+                </div>
+                <p><strong>Annual Fee:</strong> ₦120,000 / year</p>
+                <ul>
+                    <li>All Bronze Membership benefits included</li>
+                    <li>25% discount on Annual Business Expo booths & sponsorships</li>
+                    <li>Rotating spotlight placement on the Chamber Home Page</li>
+                    <li>Priority access to regional business-to-government roundtables</li>
+                </ul>
+            </dialog>
+
+            <dialog id="modal-gold" class="membership-modal">
+                <div class="modal-header">
+                    <h3>Gold Membership</h3>
+                    <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+                </div>
+                <p><strong>Annual Fee:</strong> ₦250,000 / year</p>
+                <ul>
+                    <li>All Silver Membership benefits included</li>
+                    <li>Premier permanent spotlight rotation on the Chamber Home Page</li>
+                    <li>VIP seating and speaking opportunities at all Chamber events</li>
+                    <li>50% discount on event sponsorships and dedicated social media promotion</li>
+                </ul>
+            </dialog>
+
+            <!-- STEP 2: The 4 Membership Cards will go right here! -->
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+
+            <!-- Left Column: Chamber Name & Address -->
+            <div class="footer-contact">
+                <p><strong>Ebonyi State Chamber of Commerce</strong></p>
+                <p>15 Water Works Road</p>
+                <p>Abakaliki, Ebonyi State, Nigeria</p>
+                <p>info@ebonyichamber.org</p>
+                <p>+234 803 123 4567</p>
+            </div>
+
+            <!-- Middle Column: Social Icons -->
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
+                        src="images/facebook-square.jpg" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+                        src="images/instagram-logo.jpg" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/twitter-logo.jpg"
+                        alt="Twitter"></a>
+            </div>
+
+            <!-- Right Column: Project & Copyright Info -->
+            <div class="footer-info">
+                <p class="project-title">WDD231 Class Project</p>
+                <p class="student-name">Adaugo Alexandra Ozomma</p>
+                <p>&copy; <span id="currentyear"></span> Ebonyi State Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
